@@ -1,85 +1,101 @@
 import React from 'react';
 
+// You can adjust this 'text-5xl' class to make all icons larger or smaller
+const iconSize = 'text-5xl';
+
+// --- Programming Languages & Frameworks ---
 export const PythonIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path d="M16.22 12.18c.24-.3.4-.68.4-1.12 0-.9-.72-1.62-1.62-1.62h-3.6v3.24h2.16c.9 0 1.62-.72 1.62-1.62zm-5.22-4.14v2.52h2.52c.9 0 1.62-.72 1.62-1.62s-.72-1.62-1.62-1.62h-2.52V5.4H9.38v2.64zm-1.44 9.18c-1.2.78-2.7.9-3.96.36-1.26-.54-2.16-1.62-2.16-3.06 0-1.8 1.44-3.24 3.24-3.24h2.52v2.16H5.4c-.66 0-1.08.42-1.08 1.08s.42 1.08 1.08 1.08h1.44v2.88h1.08v-1.62h1.62c.9 0 1.62.72 1.62 1.62s-.72 1.62-1.62 1.62h-.36zm7.56-4.5c0-2.16-1.8-3.96-3.96-3.96h-2.88v7.92h2.88c2.16 0 3.96-1.8 3.96-3.96z" fill="#3776AB"/><path d="M7.78 11.82c-.24.3-.4.68-.4 1.12 0 .9.72 1.62 1.62 1.62h3.6v-3.24h-2.16c-.9 0-1.62.72-1.62 1.62zm5.22 4.14v-2.52h-2.52c-.9 0-1.62.72-1.62 1.62s.72 1.62 1.62 1.62h2.52v2.52h1.62V18.6zm1.44-9.18c1.2-.78 2.7-.9 3.96-.36 1.26.54 2.16 1.62 2.16 3.06 0 1.8-1.44 3.24-3.24 3.24h-2.52v-2.16h2.16c.66 0 1.08-.42 1.08-1.08s-.42-1.08-1.08-1.08h-1.44V7.92h-1.08v1.62h-1.62c-.9 0-1.62-.72-1.62-1.62s.72-1.62 1.62-1.62h.36zm-7.56 4.5c0 2.16 1.8 3.96 3.96 3.96h2.88V7.92h-2.88c-2.16 0-3.96 1.8-3.96 3.96z" fill="#FFD43B"/></svg>
-);
-export const SqlIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>SQL</title><path d="M12,5 C16.971,5 21,6.791 21,9 L21,15 C21,17.209 16.971,19 12,19 C7.029,19 3,17.209 3,15 L3,9 C3,6.791 7.029,5 12,5 Z" fill="#DADADA"/><path d="M12,5 C16.971,5 21,6.791 21,9 L21,11 C21,13.209 16.971,15 12,15 C7.029,15 3,13.209 3,11 L3,9 C3,6.791 7.029,5 12,5 Z" fill="#F29111"/><ellipse cx="12" cy="5.5" rx="9" ry="3.5" fill="#00758F"/></svg>
-);
-export const GithubIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path fill="#FFFFFF" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    <i className={`devicon-python-plain colored ${iconSize} ${className}`}></i>
 );
 export const HtmlIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622-13.21.003.515 5.755h8.92l-.358 3.998-3.032 1.013-2.95-.975-.189-2.11h-2.61l.36 4.027 5.23 1.758 5.23-1.758.582-6.52H8.531z" fill="#E34F26"/></svg>
+    <i className={`devicon-html5-plain colored ${iconSize} ${className}`}></i>
 );
 export const CssIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.913L5.41 4.91l.213 2.622 10.125-.002-.25 2.81-7.25.002.25 2.5.475 5.325 4.138 1.438 4.138-1.438.387-4.25h-2.687l-.188 2.113-1.65.587-1.65-.587-.162-1.762h6.075l.7-7.825z" fill="#1572B6"/></svg>
+    <i className={`devicon-css3-plain colored ${iconSize} ${className}`}></i>
 );
 export const JsIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.253c-.337.662-1.023 1.22-2.118 1.623-1.096.402-2.46.603-4.095.603-1.536 0-2.844-.225-3.924-.675-1.08-.45-1.92-.99-2.52-1.62-.6-.63-.945-1.32-.945-2.07 0-.525.135-1.02.405-1.485.27-.465.63-.885 1.08-1.26.45-.375.96-.675 1.53-.9.57-.225 1.155-.337 1.755-.337.81 0 1.515.12 2.115.36.6.24.99.57.99 1.035 0 .3-.075.54-.225.72-.15.18-.345.27-.585.27-.225 0-.42-.06-.585-.18-.165-.12-.24-.285-.24-.495 0-.18.06-.33.18-.45.12-.12.285-.18.495-.18.225 0 .405.03.54.09.135.06.225.135.27.225.045.09.06.195.06.315 0 .345-.165.623-.495.833-.33.21-.825.315-1.485.315-.45 0-.84-.06-1.17-.18s-.585-.285-.765-.495c-.18-.21-.27-.465-.27-.765 0-.315.09-.585.27-.81.18-.225.42-.405.72-.54.3-.135.645-.203 1.035-.203.96 0 1.74.225 2.34.675.6.45.9 1.08.9 1.89 0 .33-.06.63-.18.9s-.285.495-.495.675zm-9.257 0c-.337.662-1.023 1.22-2.118 1.623-1.096.402-2.46.603-4.095.603-1.536 0-2.844-.225-3.924-.675-1.08-.45-1.92-.99-2.52-1.62-.6-.63-.945-1.32-.945-2.07 0-.525.135-1.02.405-1.485.27-.465.63-.885 1.08-1.26.45-.375.96-.675 1.53-.9.57-.225 1.155-.337 1.755-.337.81 0 1.515.12 2.115.36.6.24.99.57.99 1.035 0 .3-.075.54-.225.72-.15.18-.345.27-.585.27-.225 0-.42-.06-.585-.18-.165-.12-.24-.285-.24-.495 0-.18.06-.33.18-.45.12-.12.285-.18.495-.18.225 0 .405.03.54.09.135.06.225.135.27.225.045.09.06.195.06.315 0 .345-.165.623-.495.833-.33.21-.825.315-1.485.315-.45 0-.84-.06-1.17-.18s-.585-.285-.765-.495c-.18-.21-.27-.465-.27-.765 0-.315.09-.585.27-.81.18-.225.42-.405.72-.54.3-.135.645-.203 1.035-.203.96 0 1.74.225 2.34.675.6.45.9 1.08.9 1.89 0 .33-.06.63-.18.9s-.285.495-.495.675z" fill="#F7DF1E"/></svg>
-);
-export const ReactIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348"><title>React</title><circle cx="0" cy="0" r="2.05" fill="#61DAFB"></circle><g stroke="#61DAFB" strokeWidth="1" fill="none"><ellipse rx="11" ry="4.2"></ellipse><ellipse rx="11" ry="4.2" transform="rotate(60)"></ellipse><ellipse rx="11" ry="4.2" transform="rotate(120)"></ellipse></g></svg>
+    <i className={`devicon-javascript-plain colored ${iconSize} ${className}`}></i>
 );
 export const TypescriptIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TypeScript</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0z" fill="#3178C6"/><path d="M18.008 12.164v-2.81H9.246v2.81l3.232.915-3.232.916v2.81l6.63-2.81-2.52-1.129 2.52-1.129zM11.388 7.152H9.25v2.81h3.332l-3.332 1.48v2.81l6.62-2.81V9.96z" fill="#fff"/></svg>
+    <i className={`devicon-typescript-plain colored ${iconSize} ${className}`}></i>
+);
+export const ReactIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-react-original colored ${iconSize} ${className}`}></i>
 );
 export const NextjsIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" aria-label="Next.js logomark" viewBox="0 0 180 180"><mask id="a" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="180"><circle cx="90" cy="90" r="90" fill="#fff"></circle></mask><g mask="url(#a)"><circle cx="90" cy="90" r="90" fill="#fff"></circle><path d="M149.509 157.52L69.14 54H54v72h12.112v-59.52l69.883 91.04h15.636V54h-12.12v103.52z" fill="#000"></path></g></svg>
+    <i className={`devicon-nextjs-original text-white ${iconSize} ${className}`}></i>
 );
-export const PostgresqlIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>PostgreSQL</title><path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" fill="#336791"/><path d="M12.42 18.2h-1.32V9.88h1.2v.96h.12c.312-.6 1.116-1.04 2.1-1.04.288 0 .564.048.828.132v1.404c-.168-.048-.372-.084-.588-.084-.66 0-1.224.288-1.584.804-.42.6-.6 1.488-.6 2.652v3.492zm-3.264-4.5h2.184v-1.1H9.156v-2.3h2.364V9.2H9.156V6h-1.32v12.2h1.32v-3.32h.024z" fill="#fff"/></svg>
+
+// --- Databases ---
+export const SqlIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-postgresql-plain colored ${iconSize} ${className}`}></i>
 );
-export const TelegramIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.17.91-.494 1.208-.822 1.23-.696.04-1.22-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.258-.82-2.21-1.33-2.028-2.036.184-.693 1.25-1.493 1.25-1.493l5.05-4.444c.2-.172.4-.333.06-.522-.34-.19-.594 0-.893.204l-6.335 3.945c-.333.203-.645.327-.962.327-.852 0-1.52-.284-1.52-.284l-.164-.053s-.47-.146-.47-.534c0-.387.23-.593.645-.774 1.23-1.054 7.63-4.52 7.63-4.52s.31-.15.6-.15z" fill="#26A5E4"/></svg>
-);
-export const DiscordIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" ><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4464.8245-.6667 1.2615-2.6138-.6036-5.4683-.6036-8.0821 0-.2203-.437-.4556-.8862-.6667-1.2615a.0741.0741 0 0 0-.0785-.0371 19.7913 19.7913 0 0 0-4.8851 1.5152.069.069 0 0 0-.0321.0262c-3.5663 6.024-3.5663 12.248 0 18.272a.069.069 0 0 0 .0321.0262 19.7913 19.7913 0 0 0 4.8851 1.5152.0741.0741 0 0 0 .0785-.0371c.2107-.3718.4418-.8133.6567-1.2467-1.2744-.6002-2.4568-1.39-3.4851-2.314a.0741.0741 0 0 1 .004-.1157c.9257-.7956 1.9356-1.5028 3.0153-2.1032a.0741.0741 0 0 1 .082-.004c.483.2202.983.431 1.4995.6315a.0741.0741 0 0 0 .0864 0c.516-.1998 1.016-.4105 1.4995-.6315a.0741.0741 0 0 0 .0864 0c1.079.6004 2.09 1.3076 3.0153 2.1032a.0741.0741 0 0 1 .082.004c1.028.924 2.21 1.7138 3.4851 2.314a.0741.0741 0 0 1 .004.1157c.2148.4334.4459.8749.6567 1.2467a.0741.0741 0 0 0 .0785.0371 19.7913 19.7913 0 0 0 4.8851-1.5152.069.069 0 0 0 .0321-.0262c3.5663-6.024 3.5663-12.248 0-18.272a.069.069 0 0 0-.0321-.0262ZM8.02 15.3312c-.7824 0-1.418-1.0156-1.418-2.256s.6356-2.256 1.418-2.256c.7824 0 1.418 1.0156 1.418 2.256s-.6356 2.256-1.418 2.256Zm7.9748 0c-.7824 0-1.418-1.0156-1.418-2.256s.6356-2.256 1.418-2.256c.7824 0 1.418 1.0156 1.418 2.256s-.6356 2.256-1.418 2.256Z" fill="#5865F2"/></svg>
+export const PostgresqlIcon = SqlIcon; // Alias to prevent future errors
+
+// --- DevOps & Cloud ---
+export const GithubIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-github-original colored ${iconSize} ${className}`}></i>
 );
 export const GcpIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google Cloud</title><path d="M6.35,8.88h3.9l-2.1,3.43L6.35,8.88z" fill="#4285F4"/><path d="M12.24,15.17l2.1-3.43h-3.9L12.24,15.17z" fill="#0F9D58"/><path d="M12,4l-6,10.39h12L12,4z M12,13.6L9.9,10.05h4.2L12,13.6z" fill="#DB4437"/><path d="M14.65,13.12l-2.1,3.43l4.2,0L14.65,13.12z" fill="#F4B400"/></svg>
-);
-export const JiraIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Jira</title><path d="M22.583 11.332L12.668 1.417a1.002 1.002 0 0 0-1.336 0L1.417 11.332a1 1 0 0 0 0 1.336l9.916 9.916a1 1 0 0 0 1.336 0l9.916-9.916a1 1 0 0 0 0-1.336zM12 16.92l-4.402-4.401L12 8.117l4.402 4.402L12 16.92z" fill="#2684FF"/></svg>
-);
-export const TensorflowIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TensorFlow</title><path d="M12.012 0L24 6.94v1.548l-4.704 2.717v5.105L12 21.054l-7.296-4.744v-5.105L0 8.488V6.94L12.012 0zM12 2.31l-9.288 5.363L12 13.03l9.288-5.358L12 2.31z m-5.832 7.742l5.832 3.368 5.832-3.368-1.584.915 1.584.915v1.83l-5.832 3.368-5.832-3.368v-1.83l1.584-.915-1.584-.915z" fill="#FF6F00"/></svg>
-);
-export const PytorchIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>PyTorch</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c3.545 0 6.699-1.531 8.875-3.992V12c0-3.309-2.691-6-6-6H9v3h3c1.654 0 3 1.346 3 3v3H9v-3h3c-.34 0-.67.031-1 .09V9.332C10.36.495 11.168.001 12 0zM8.875 3.992A9.952 9.952 0 0 0 3.992 8.875H12c0-3.309-2.691-6-6-6H3.992z" fill="#EE4C2C"/></svg>
-);
-export const ScikitlearnIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>scikit-learn</title><path d="M15.421 2.336c-2.348-.783-4.992-.41-6.99.98-1.998 1.388-3.13 3.65-3.13 6.068 0 2.22.934 4.341 2.54 5.772 1.604 1.433 3.737 2.22 5.968 2.22 2.347 0 4.991-.409 6.99-1.02a.41.41 0 0 0 .33-.539l-.81-3.287a.41.41 0 0 0-.54-.33c-1.42.37-3.2.58-4.94.58-1.517 0-2.915-.58-3.928-1.631-1.013-1.054-1.558-2.45-1.558-3.882 0-1.594.62-3.13 1.755-4.223 1.135-1.094 2.709-1.716 4.382-1.716.935 0 1.91.124 2.875.37a.41.41 0 0 0 .49-.33l1.094-3.582a.41.41 0 0 0-.29-.49z" fill="#F7931E"/><path d="M8.49 13.886c-1.605-1.43-2.54-3.551-2.54-5.772 0-2.418 1.132-4.68 3.13-6.068" fill="#3499cd"/></svg>
-);
-export const PandasIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>pandas</title><path d="M2.333 0v11.23h3.333V3.333h4.43v7.897h3.333V3.333h4.43v7.897h3.333V0H2.333zm0 12.767v11.23h3.333v-7.896h4.43V24h3.333v-7.896h4.43V24h3.333v-11.23H2.333z" fill="#130654"/></svg>
-);
-export const DockerIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Docker</title><path d="M23.23.333H.77C.344.333 0 .68 0 1.103v21.022c0 .424.345.77.77.77h22.46c.424 0 .77-.346.77-.77V1.103c0-.423-.346-.77-.77-.77zM7.34 14.802H4.423v-2.917H7.34v2.917zm0-4.09H4.423V7.795H7.34v2.917zm0-4.09H4.423V3.705H7.34v2.917zm4.323 8.18H8.746v-2.917h2.917v2.917zm0-4.09H8.746V7.795h2.917v2.917zm0-4.09H8.746V3.705h2.917v2.917zm4.324 8.18h-2.918v-2.917h2.918v2.917zm0-4.09h-2.918V7.795h2.918v2.917zm0-4.09h-2.918V3.705h2.918v2.917zm5.55 7.425c-1.37.008-2.52-.51-3.41-1.442-1.04-1.09-1.63-2.52-1.63-4.075 0-1.554.59-2.983 1.63-4.075.89-.933 2.04-1.45 3.41-1.442a4.42 4.42 0 0 1 3.266 1.342l-2.062 2.062a1.51 1.51 0 0 0-1.204-.51 1.51 1.51 0 0 0-1.06.442 1.51 1.51 0 0 0-.443 1.06c0 .41.148.78.442 1.06a1.51 1.51 0 0 0 1.06.442c.426 0 .822-.162 1.204-.51l2.062 2.062a4.42 4.42 0 0 1-3.266 1.342z" fill="#2496ED"/></svg>
+    <i className={`devicon-googlecloud-plain colored ${iconSize} ${className}`}></i>
 );
 export const AwsIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Amazon AWS</title><path d="M13.29 16.11c-.49.48-1.16.77-1.83.77-1.37 0-2.58-1.12-2.58-2.6 0-.71.28-1.35.73-1.82.45-.47 1.12-.73 1.78-.73.43 0 .84.14 1.16.39.26.19.49.49.49.83v.1h-4.04c.1.72.71 1.28 1.48 1.28.46 0 .88-.2 1.17-.51l1.03.82zM15.4 9.17c-1.48-1.38-3.6-2.2-5.78-2.2s-4.3.82-5.77 2.2c-.32.3-.32.82 0 1.12.32.3.82.3 1.12 0 .9-.85 2.18-1.37 3.53-1.37.9 0 1.76.28 2.5.8.36.24.84.17 1.1-.19.26-.35.19-.83-.19-1.1z" fill="#FF9900"/></svg>
+    <i className={`devicon-amazonwebservices-original colored ${iconSize} ${className}`}></i>
 );
-export const AgileIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><title>Agile</title><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm2 0h-2v-2h2v2zm2 0h-2v-2h2v2zm-2-4h-2V7h2v5z" fill="#3f51b5"/></svg>
+export const DockerIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-docker-plain colored ${iconSize} ${className}`}></i>
 );
-export const ScrumIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Scrum</title><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-.25 15.25c-3.033 0-5.5-2.467-5.5-5.5s2.467-5.5 5.5-5.5 5.5 2.467 5.5 5.5-2.467 5.5-5.5 5.5z" fill="#009688"/><path d="M11.75 6.25c-3.033 0-5.5 2.467-5.5 5.5h2c0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5v2c3.033 0 5.5-2.467 5.5-5.5s-2.467-5.5-5.5-5.5z" fill="#00bcd4"/></svg>
+
+// --- Data Science & ML ---
+export const TensorflowIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-tensorflow-original colored ${iconSize} ${className}`}></i>
+);
+export const PytorchIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-pytorch-plain colored ${iconSize} ${className}`}></i>
+);
+// REPLACEMENT for Scikit-learn:
+export const NumpyIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-numpy-original colored ${iconSize} ${className}`}></i>
+);
+export const PandasIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-pandas-original colored ${iconSize} ${className}`}></i>
+);
+
+// --- Project Management & Design ---
+export const JiraIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-jira-plain colored ${iconSize} ${className}`}></i>
 );
 export const FigmaIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Figma</title><path d="M12 0c-3.31 0-6 2.69-6 6v6c0 3.31 2.69 6 6 6s6-2.69 6-6V6c0-3.31-2.69-6-6-6zm0 15c-1.66 0-3-1.34-3-3V6c0-1.66 1.34-3 3-3s3 1.34 3 3v6c0 1.66-1.34 3-3 3zm-3-9c-1.66 0-3 1.34-3 3v3c0 3.31 2.69 6 6 6s6-2.69 6-6V9c0-1.66-1.34-3-3-3H9z" fill="#F24E1E"/><path d="M12 3c-1.66 0-3 1.34-3 3v6c0 1.66 1.34 3 3 3s3-1.34 3-3V6c0-1.66-1.34-3-3-3z" fill="#FF7262"/><path d="M9 6c-1.66 0-3 1.34-3 3v3c0 3.31 2.69 6 6 6s6-2.69 6-6V9c0-1.66-1.34-3-3-3H9z" fill="#A259FF"/><path d="M12 18c3.31 0 6-2.69 6-6V9c0-1.66-1.34-3-3-3h-3c-1.66 0-3 1.34-3 3v6c0 1.66 1.34 3 3 3z" fill="#1ABCFE"/><path d="M12 15c-1.66 0-3-1.34-3-3V9c1.66 0 3 1.34 3 3v3z" fill="#0ACF83"/></svg>
+    <i className={`devicon-figma-plain colored ${iconSize} ${className}`}></i>
 );
 export const PowerbiIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Microsoft Power BI</title><path d="M1.333 21.333V12h6v9.333z" fill="#F2C811"/><path d="M10 21.333v-6h6v6z" fill="#F2C811"/><path d="M18.667 21.333V2.667h-6v18.666z" fill="#F2C811"/><path d="M10 8.333V2.667H4v5.666z" fill="#000000"/></svg>
+  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+    <title>Microsoft Power BI</title>
+    <path d="M1.333 21.333V12h6v9.333z" fill="#F2C811"/><path d="M10 21.333v-6h6v6z" fill="#F2C811"/><path d="M18.667 21.333V2.667h-6v18.666z" fill="#F2C811"/><path d="M10 8.333V2.667H4v5.666z" fill="#F2C811"/>
+  </svg>
+);
+
+// --- Methodologies ---
+export const AgileIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-arrows-spin text-blue-500 ${iconSize} ${className}`}></i>
+);
+export const ScrumIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-people-group text-green-500 ${iconSize} ${className}`}></i>
+);
+
+// --- Communication & Social ---
+// REPLACEMENT for Telegram/Discord:
+export const SlackIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`devicon-slack-plain colored ${iconSize} ${className}`}></i>
 );
 export const LinkedinIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" fill="#0077B5"></path></svg>
+    <i className={`devicon-linkedin-plain colored ${iconSize} ${className}`}></i>
 );
+
+// --- General Icons ---
 export const MailIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    <i className={`fa-solid fa-envelope text-gray-400 ${iconSize} ${className}`}></i>
 );
 export const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-    </svg>
+    <i className={`fa-solid fa-xmark text-gray-400 ${iconSize} ${className}`}></i>
 );

@@ -1,5 +1,7 @@
-import { 
-    PythonIcon, SqlIcon, GithubIcon, HtmlIcon, CssIcon, JsIcon, ReactIcon, TypescriptIcon, NextjsIcon, PostgresqlIcon, TelegramIcon, DiscordIcon, GcpIcon, JiraIcon, TensorflowIcon, PytorchIcon, ScikitlearnIcon, PandasIcon, DockerIcon, AwsIcon, AgileIcon, ScrumIcon, FigmaIcon, PowerbiIcon, LinkedinIcon, MailIcon 
+import {
+    PythonIcon, SqlIcon, GithubIcon, HtmlIcon, CssIcon, JsIcon, ReactIcon, TypescriptIcon, NextjsIcon, PostgresqlIcon, GcpIcon, JiraIcon, TensorflowIcon, PytorchIcon, PandasIcon, DockerIcon, AwsIcon, AgileIcon, ScrumIcon, FigmaIcon, PowerbiIcon, LinkedinIcon, MailIcon,
+    // New icons we are adding:
+    SlackIcon, NumpyIcon
 } from './components/icons/Icons';
 import type { Skill, ExperienceItem, Project, SocialLink } from './types';
 
@@ -14,13 +16,12 @@ export const SKILLS: Skill[] = [
   { name: 'TypeScript', icon: TypescriptIcon },
   { name: 'Next.js', icon: NextjsIcon },
   { name: 'PostgreSQL', icon: PostgresqlIcon },
-  { name: 'Telegram', icon: TelegramIcon },
-  { name: 'Discord', icon: DiscordIcon },
+  { name: 'Slack', icon: SlackIcon }, // <-- REPLACED TELEGRAM/DISCORD
   { name: 'Google Cloud', icon: GcpIcon },
   { name: 'Jira', icon: JiraIcon },
   { name: 'TensorFlow', icon: TensorflowIcon },
   { name: 'PyTorch', icon: PytorchIcon },
-  { name: 'Scikit-learn', icon: ScikitlearnIcon },
+  { name: 'NumPy', icon: NumpyIcon }, // <-- REPLACED SCIKIT-LEARN
   { name: 'Pandas', icon: PandasIcon },
   { name: 'Docker', icon: DockerIcon },
   { name: 'AWS', icon: AwsIcon },
@@ -62,28 +63,28 @@ export const PROJECTS: Project[] = [
     title: 'Real-Time Clinic Analytics Dashboard',
     description: 'An end-to-end web application allowing clinics to monitor live patient data, track staff activity, and analyze performance metrics in real-time.',
     tags: ['Full Stack', 'React', 'Real-Time Data', 'Geolocation', 'Analytics', 'AI'],
-    imageUrl: 'https://picsum.photos/seed/mapclinic/600/400',
+    imageUrl: 'https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/Gemini_Generated_Image_dy8ae6dy8ae6dy8a.png',
     repoUrl: 'https://github.com/SatvickMalhotra/full-stack-apps-with-AI/tree/main/MapMyClinic',
   },
   {
     title: 'MediTrack: Medication Inventory System',
     description: 'A comprehensive database system designed to manage pharmaceutical inventory, allowing users to place orders, track stock, and maintain accurate records.',
     tags: ['Inventory Management', 'Database', 'SQL', 'Healthcare', 'Full Stack'],
-    imageUrl: 'https://picsum.photos/seed/meditrack/600/400',
+    imageUrl: 'https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/Gemini_Generated_Image_9adxou9adxou9adx.png',
     repoUrl: 'https://github.com/SatvickMalhotra/full-stack-apps-with-AI/tree/main/MediTrack%20System',
   },
   {
     title: 'AI-Powered Furniture E-commerce Platform',
     description: 'A modern e-commerce application for a furniture store, featuring AI-driven analytics, order tracking, and automated bill generation for a seamless user experience.',
     tags: ['E-commerce', 'React', 'AI', 'Analytics', 'Full Stack'],
-    imageUrl: 'https://picsum.photos/seed/furnitureai/600/400',
+    imageUrl: 'https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/Gemini_Generated_Image_1dyjfb1dyjfb1dyj.png',
     repoUrl: 'https://github.com/SatvickMalhotra/full-stack-apps-with-AI/tree/main/Furniture%20App%20(React)',
   },
   {
     title: 'Multi-Agent AI System',
     description: 'An advanced system where multiple AI agents collaborate, iteratively refining solutions to complex problems until an optimal, user-approved outcome is achieved.',
     tags: ['AI', 'Multi-Agent System', 'Generative AI', 'Python', 'Autonomous Agents'],
-    imageUrl: 'https://picsum.photos/seed/aiagents/600/400',
+    imageUrl: 'https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/Gemini_Generated_Image_4972k04972k04972.png',
     repoUrl: 'https://github.com/SatvickMalhotra/full-stack-apps-with-AI/tree/main/AI_Agents(Coding)',
   },
   {
@@ -97,7 +98,7 @@ export const PROJECTS: Project[] = [
     title: 'Real-Time OCR Data Pipeline',
     description: 'An efficient Optical Character Recognition (OCR) system that intelligently extracts text from images and populates structured data into a database in real-time.',
     tags: ['OCR', 'Computer Vision', 'Data Pipeline', 'Real-Time', 'Automation'],
-    imageUrl: 'https://picsum.photos/seed/ocr/600/400',
+    imageUrl: 'https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/thumnail001.png',
     repoUrl: 'https://github.com/SatvickMalhotra',
   }
 ];

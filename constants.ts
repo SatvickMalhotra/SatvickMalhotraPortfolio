@@ -34,27 +34,27 @@ export const SKILLS: Skill[] = [
 export const EXPERIENCES: ExperienceItem[] = [
   {
     role: 'Product Manager AI',
-    company: 'InnovateAI Corp',
+    company: 'M-Swasth Solutions Private Limited',
     period: 'April 2025 - Present',
     description: 'Leading the development of next-generation AI products, defining product vision, strategy, and roadmap from conception to launch.'
   },
   {
     role: 'Data Engineer',
-    company: 'QuantumData Solutions',
+    company: 'M-Swasth Solutions Private Limited',
     period: 'September 2023 - March 2025',
     description: 'Designed, built, and maintained scalable data pipelines and infrastructure. Optimized data warehousing solutions and ETL processes for large-scale data processing.'
   },
   {
     role: 'Data Analyst Intern',
-    company: 'AnalyticsFront Inc.',
+    company: 'Minsure Private Limited',
     period: 'Summer 2023',
     description: 'Analyzed complex datasets to extract actionable insights, created dashboards, and supported data-driven decision-making across various departments.'
   },
   {
-    role: 'Data Analyst Intern',
-    company: 'Data Insights Co.',
-    period: 'Summer 2022',
-    description: 'Assisted senior analysts with data cleaning, visualization, and reporting tasks. Contributed to a major market trend analysis project.'
+    role: 'freelance',
+    company: 'Self',
+    period: 'Summer 2022 - Present',
+    description: 'worked on omre than 100+ project so far building end to end web apps, automation system, python scripts, AI chat bots and AI tools.'
   }
 ];
 

@@ -34,7 +34,7 @@ export const PostgresqlIcon = SqlIcon; // Alias to prevent future errors
 
 // --- DevOps & Cloud ---
 export const GithubIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-github-original colored ${iconSize} ${className}`}></i>
+    <i className={`devicon-github-original ${iconSize} ${className}`}></i>
 );
 export const GcpIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-googlecloud-plain colored ${iconSize} ${className}`}></i>

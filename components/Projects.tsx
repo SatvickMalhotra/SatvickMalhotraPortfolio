@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PROJECTS } from '../constants';
 import { GithubIcon } from './icons/Icons';
@@ -52,7 +51,7 @@ export const Projects: React.FC = () => {
                      hover:bg-cyan-400/20 hover:text-white hover:border-cyan-400
                      hover:shadow-lg hover:shadow-cyan-500/30 transform hover:-translate-y-1"
         >
-          <GithubIcon className="w-6 h-6" />
+          <i className="devicon-github-original text-2xl text-white"></i>
           <span>Explore More Projects</span>
         </a>
       </div>

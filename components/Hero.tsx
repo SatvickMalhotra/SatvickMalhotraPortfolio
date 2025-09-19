@@ -43,6 +43,13 @@ export const Hero: React.FC = () => {
             50% { box-shadow: 0 0 70px 15px #007cf0, 0 0 110px 25px #ff00c3, inset 0 0 90px 15px #007cf0; }
             100% { box-shadow: 0 0 60px 10px #4a00e0, 0 0 100px 20px #007cf0, inset 0 0 80px 10px #4a00e0; }
         }
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(-10px, 15px) rotate(-6deg); }
+            50% { transform: translate(15px, -10px) rotate(6deg); }
+            75% { transform: translate(5px, 10px) rotate(-3deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
       `}</style>
       <div className="text-center">
         <div className="relative inline-block mb-8">
@@ -50,7 +57,7 @@ export const Hero: React.FC = () => {
             src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/Generated%20Image%20September%2008%2C%202025%20-%205_25PM.png"
             alt="Satvick Malhotra"
             className="w-48 h-48 rounded-full object-cover border-4 border-gray-800/80
-                       animate-[halo_8s_ease-in-out_infinite]"
+                       animate-[halo_8s_ease-in-out_infinite,float_20s_ease-in-out_infinite_alternate]"
           />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">

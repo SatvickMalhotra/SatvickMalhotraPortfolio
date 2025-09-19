@@ -8,6 +8,18 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 export const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20">
+      <style>{`
+        @keyframes wiggle {
+          0% { transform: translateY(-0.5rem) rotate(0deg); }
+          25% { transform: translateY(-0.5rem) rotate(-5deg) translateX(2px); }
+          50% { transform: translateY(-0.5rem) rotate(5deg) translateX(-2px); }
+          75% { transform: translateY(-0.5rem) rotate(-3deg); }
+          100% { transform: translateY(-0.5rem) rotate(0deg); }
+        }
+        .group:hover .wiggle-on-hover {
+          animation: wiggle 0.4s ease-in-out infinite;
+        }
+      `}</style>
       <SectionTitle>Tools & Skills</SectionTitle>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-6 gap-y-12">
         {SKILLS.map((skill) => (
@@ -25,7 +37,7 @@ export const Skills: React.FC = () => {
                    filter: 'blur(10px)'
                  }}>
             </div>
-            <skill.icon className="h-12 w-12 transition-all duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
+            <skill.icon className="h-12 w-12 transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] wiggle-on-hover" />
             <span className="absolute bottom-4 text-sm opacity-0 group-hover:opacity-100 
                              transition-all duration-300 text-gray-200 font-medium">
               {skill.name}

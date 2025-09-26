@@ -60,10 +60,13 @@ export const Hero: React.FC = () => {
                        animate-[halo_8s_ease-in-out_infinite,float_20s_ease-in-out_infinite_alternate]"
           />
         </div>
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
           <AnimatedText text="Satvick Malhotra" />
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300">
+        <p
+          className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300"
+          style={{textShadow: '0 2px 4px rgba(0,0,0,0.7)'}}
+        >
           <AnimatedText text="Architecting the Future of Data & AI." className="block mb-2 font-semibold" />
           <AnimatedText text="I am a Data Engineer and AI Product Manager passionate about building intelligent systems that solve real-world problems." />
         </p>

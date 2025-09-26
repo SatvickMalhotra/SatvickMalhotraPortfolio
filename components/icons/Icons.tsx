@@ -99,3 +99,6 @@ export const MailIcon: React.FC<{ className?: string }> = ({ className }) => (
 export const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`fa-solid fa-xmark text-gray-400 ${iconSize} ${className}`}></i>
 );
+export const ChevronUpIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-chevron-up ${className}`}></i>
+);

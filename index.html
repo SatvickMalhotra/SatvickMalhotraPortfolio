@@ -10,60 +10,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <style>
-    @keyframes move-blob-1 {
-      0% { transform: translate(0, 0); }
-      25% { transform: translate(60vw, 40vh); }
-      50% { transform: translate(30vw, -20vh); }
-      75% { transform: translate(-20vw, 30vh); }
-      100% { transform: translate(0, 0); }
-    }
-    @keyframes move-blob-2 {
-      0% { transform: translate(0, 0); }
-      25% { transform: translate(-50vw, 30vh); }
-      50% { transform: translate(20vw, 50vh); }
-      75% { transform: translate(40vw, -30vh); }
-      100% { transform: translate(0, 0); }
-    }
-    @keyframes move-blob-3 {
-      0% { transform: translate(0, 0); }
-      25% { transform: translate(30vw, -40vh); }
-      50% { transform: translate(-40vw, -10vh); }
-      75% { transform: translate(10vw, 50vh); }
-      100% { transform: translate(0, 0); }
-    }
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.3;
-      will-change: transform;
-    }
-    .blob-1 {
-      width: 400px;
-      height: 400px;
-      background: #007cf0;
-      top: -150px;
-      left: -150px;
-      animation: move-blob-1 25s infinite alternate;
-    }
-    .blob-2 {
-      width: 500px;
-      height: 500px;
-      background: #4a00e0;
-      bottom: -200px;
-      right: -200px;
-      animation: move-blob-2 30s infinite alternate;
-    }
-    .blob-3 {
-        width: 300px;
-        height: 300px;
-        background: #ff00c3;
-        top: 40vh;
-        right: 40vw;
-        animation: move-blob-3 20s infinite alternate;
-    }
-  </style>
 <script type="importmap">
 {
   "imports": {
@@ -76,7 +22,7 @@
 }
 </script>
 </head>
-<body class="bg-black text-gray-200 font-sans antialiased overflow-x-hidden">
+<body class="bg-[#1a052a] text-gray-200 font-sans antialiased overflow-x-hidden">
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

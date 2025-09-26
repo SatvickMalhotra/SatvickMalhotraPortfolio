@@ -16,13 +16,17 @@ const AnimatedBackground: React.FC = () => {
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
+      // Re-initialize animations on resize to fit new screen dimensions
+      verticalLines.init();
+      particles.init();
+      network.init();
     };
     window.addEventListener('resize', handleResize);
 
-    // --- Vertical Lines (Replaces Grid) ---
+    // --- Vertical Lines (Digital Rain) ---
     const verticalLines = {
       list: [] as { x: number; y: number; speed: number; length: number }[],
-      count: 40, // Number of lines
+      count: 40,
       init() {
         this.list = [];
         for (let i = 0; i < this.count; i++) {
@@ -56,9 +60,7 @@ const AnimatedBackground: React.FC = () => {
         }
       },
     };
-    verticalLines.init();
-
-
+    
     // --- Particles ---
     const particles = {
       list: [] as { x: number; y: number; size: number; speed: number }[],
@@ -86,111 +88,76 @@ const AnimatedBackground: React.FC = () => {
         }
       },
     };
-    particles.init();
-
-    // --- Neural Network (Simplified) ---
+    
+    // --- Dynamic Node Network (Replaces static Neural Network) ---
     const network = {
-      nodes: [] as { x: number; y: number }[],
-      connections: [] as { from: number; to: number }[],
-      signals: [] as { from: number; to: number; progress: number, speed: number }[],
-      layers: [4, 3, 3], // Reduced complexity
+      nodes: [] as { x: number; y: number; vx: number; vy: number; }[],
+      nodeCount: 60,
+      maxDist: 120, // Max distance for a connection to form
       init() {
         this.nodes = [];
-        this.connections = [];
-        
-        const layerSpacing = width / (this.layers.length + 1);
-        let totalNodesBeforeThisLayer = 0;
-
-        this.layers.forEach((count, i) => {
-          const x = layerSpacing * (i + 1);
-          
-          for (let j = 0; j < count; j++) {
-            const y = (height / (count + 1)) * (j + 1);
-            const currentNodeIndex = totalNodesBeforeThisLayer + j;
-            this.nodes.push({ x, y });
-            
-            if (i > 0) {
-              const prevLayerCount = this.layers[i-1];
-              const prevLayerStartIndex = totalNodesBeforeThisLayer - prevLayerCount;
-              for(let k = 0; k < prevLayerCount; k++){
-                  this.connections.push({ from: prevLayerStartIndex + k, to: currentNodeIndex});
-              }
-            }
-          }
-          totalNodesBeforeThisLayer += count;
-        });
+        for (let i = 0; i < this.nodeCount; i++) {
+          this.nodes.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: Math.random() * 0.6 - 0.3,
+            vy: Math.random() * 0.6 - 0.3,
+          });
+        }
       },
       draw() {
-        ctx.globalAlpha = 0.3;
-        ctx.strokeStyle = `hsla(${hue - 90}, 100%, 50%, 0.5)`;
-        this.connections.forEach(c => {
-          const fromNode = this.nodes[c.from];
-          const toNode = this.nodes[c.to];
-          if (fromNode && toNode) {
-            ctx.beginPath();
-            ctx.moveTo(fromNode.x, fromNode.y);
-            ctx.lineTo(toNode.x, toNode.y);
-            ctx.stroke();
-          }
-        });
-
+        // Update and draw node positions
         this.nodes.forEach(node => {
+          node.x += node.vx;
+          node.y += node.vy;
+
+          // Wrap nodes around screen edges
+          if (node.x > width) node.x = 0;
+          else if (node.x < 0) node.x = width;
+          if (node.y > height) node.y = 0;
+          else if (node.y < 0) node.y = height;
+          
           ctx.beginPath();
-          ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
-          ctx.fillStyle = `hsla(${hue - 90}, 100%, 70%, 0.8)`;
+          ctx.arc(node.x, node.y, 2.5, 0, Math.PI * 2);
+          ctx.fillStyle = `hsla(${hue - 90}, 100%, 70%, 0.9)`;
           ctx.fill();
         });
-        
-        this.signals.forEach((signal, i) => {
-            signal.progress += signal.speed;
-            if(signal.progress >= 1){
-                this.signals.splice(i, 1);
-                return;
-            }
-            const fromNode = this.nodes[signal.from];
-            const toNode = this.nodes[signal.to];
 
-            if (fromNode && toNode) {
-              const x = fromNode.x + (toNode.x - fromNode.x) * signal.progress;
-              const y = fromNode.y + (toNode.y - fromNode.y) * signal.progress;
+        // Draw connections based on node proximity
+        ctx.lineWidth = 1;
+        for (let i = 0; i < this.nodes.length; i++) {
+          for (let j = i + 1; j < this.nodes.length; j++) {
+            const nodeA = this.nodes[i];
+            const nodeB = this.nodes[j];
+            const dx = nodeA.x - nodeB.x;
+            const dy = nodeA.y - nodeB.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
 
+            if (dist < this.maxDist) {
+              const opacity = 1 - (dist / this.maxDist);
               ctx.beginPath();
-              ctx.arc(x, y, 3, 0, Math.PI * 2);
-              ctx.fillStyle = `hsla(0, 0%, 100%, 0.8)`;
-              ctx.shadowColor = `hsla(0, 0%, 100%, 1)`;
-              ctx.shadowBlur = 10;
-              ctx.fill();
-              ctx.shadowBlur = 0;
+              ctx.moveTo(nodeA.x, nodeA.y);
+              ctx.lineTo(nodeB.x, nodeB.y);
+              ctx.strokeStyle = `hsla(${hue - 90}, 100%, 50%, ${opacity * 0.5})`;
+              ctx.stroke();
             }
-        });
-        
-        if(this.connections.length > 0 && Math.random() < 0.1 && this.signals.length < 15) { // Reduced signals
-            const randomConnection = this.connections[Math.floor(Math.random() * this.connections.length)];
-            this.signals.push({
-                from: randomConnection.from,
-                to: randomConnection.to,
-                progress: 0,
-                speed: 0.01 + Math.random() * 0.02
-            });
+          }
         }
-        ctx.globalAlpha = 1;
       }
-    }
+    };
+    
+    verticalLines.init();
+    particles.init();
     network.init();
 
     let animationFrameId: number;
     const animate = () => {
-      ctx.fillStyle = 'rgba(26, 5, 42, 0.2)';
+      ctx.fillStyle = 'rgba(26, 5, 42, 0.2)'; // Fading trail effect
       ctx.fillRect(0, 0, width, height);
 
       hue = (hue + 0.1) % 360;
       
-      ctx.save();
-      ctx.translate(-width / 6, -height / 6); // Adjusted pan
-      ctx.scale(1.2, 1.2); // Reduced zoom
       network.draw();
-      ctx.restore();
-
       particles.draw();
       verticalLines.draw();
 

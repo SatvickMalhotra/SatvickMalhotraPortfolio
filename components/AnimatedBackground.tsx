@@ -12,14 +12,18 @@ const AnimatedBackground: React.FC = () => {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
     let hue = 217;
+    let isLargeScreen = width >= 768; // Only show network on screens >= 768px
 
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
+      isLargeScreen = width >= 768;
       // Re-initialize animations on resize to fit new screen dimensions
       verticalLines.init();
       particles.init();
-      network.init();
+      if (isLargeScreen) {
+        network.init();
+      }
     };
     window.addEventListener('resize', handleResize);
 
@@ -148,7 +152,9 @@ const AnimatedBackground: React.FC = () => {
     
     verticalLines.init();
     particles.init();
-    network.init();
+    if (isLargeScreen) {
+      network.init();
+    }
 
     let animationFrameId: number;
     const animate = () => {
@@ -157,7 +163,9 @@ const AnimatedBackground: React.FC = () => {
 
       hue = (hue + 0.1) % 360;
       
-      network.draw();
+      if (isLargeScreen) {
+        network.draw();
+      }
       particles.draw();
       verticalLines.draw();
 

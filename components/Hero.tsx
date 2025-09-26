@@ -1,5 +1,27 @@
 import React from 'react';
 
+const BouncingText: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
+  const words = text.split(' ');
+  return (
+    <span className={className}>
+      {words.map((word, i) => (
+        <React.Fragment key={i}>
+          <span
+            className="inline-block"
+            style={{
+              animation: `bounceIn 0.8s ease-out ${i * 0.15}s forwards`,
+              opacity: 0,
+            }}
+          >
+            {word}
+          </span>
+          {i < words.length - 1 && ' '}
+        </React.Fragment>
+      ))}
+    </span>
+  );
+};
+
 const AnimatedText: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
   let charCount = 0;
   const words = text.split(' ');
@@ -11,7 +33,7 @@ const AnimatedText: React.FC<{ text: string; className?: string }> = ({ text, cl
           <span key={i} className="inline-block">
             {word.split('').map((char, j) => {
               const style = {
-                animation: `fadeInUp 0.5s ease-out ${charCount * 0.05}s forwards`,
+                animation: `fadeInUp 0.5s ease-out ${charCount * 0.01}s forwards`,
                 opacity: 0,
                 display: 'inline-block',
               };
@@ -37,6 +59,12 @@ export const Hero: React.FC = () => {
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: translateY(-40px); }
+            60% { opacity: 1; transform: translateY(5px); }
+            80% { transform: translateY(-2px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
         @keyframes halo {
             0% { box-shadow: 0 0 60px 10px #4a00e0, 0 0 100px 20px #007cf0, inset 0 0 80px 10px #4a00e0; }
@@ -67,7 +95,7 @@ export const Hero: React.FC = () => {
           className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300"
           style={{textShadow: '0 2px 4px rgba(0,0,0,0.7)'}}
         >
-          <AnimatedText text="Architecting the Future of Data & AI." className="block mb-2 font-semibold" />
+          <BouncingText text="Architecting the Future of Data & AI." className="block mb-2 font-semibold" />
           <AnimatedText text="I am a Data Engineer and AI Product Manager passionate about building intelligent systems that solve real-world problems." />
         </p>
       </div>

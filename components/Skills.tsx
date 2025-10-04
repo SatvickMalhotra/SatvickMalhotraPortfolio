@@ -46,6 +46,7 @@ export const Skills: React.FC = () => {
           opacity: 0;
           transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
+        /* Desktop slide-in animation */
         .skill-item.from-left {
           transform: translateX(-80px);
         }
@@ -56,19 +57,33 @@ export const Skills: React.FC = () => {
           opacity: 1;
           transform: translateX(0);
         }
+        
+        /* Mobile-specific pop-up animation */
+        @media (max-width: 767px) {
+          /* Override desktop slide-in with a pop-up effect */
+          .skill-item.from-left,
+          .skill-item.from-right {
+            transform: scale(0.7); /* Start smaller */
+            opacity: 0;
+          }
+          .skill-item.is-visible {
+            transform: scale(1); /* End at normal size */
+            opacity: 1;
+          }
+        }
       `}</style>
       <SectionTitle>Tools & Skills</SectionTitle>
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-6 gap-y-12">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-y-8 sm:gap-y-12 gap-x-4 sm:gap-x-6">
         {SKILLS.map((skill, index) => (
           <div
             key={skill.name}
-            className={`group relative flex flex-col items-center justify-center p-4 aspect-square
+            className={`group relative flex flex-col items-center justify-center p-2 sm:p-4 aspect-square
                        bg-[var(--card-background-color)] rounded-2xl border border-[var(--border-color)]
                        backdrop-blur-sm
                        transition-all duration-300 ease-in-out
                        hover:bg-[var(--card-background-color)]/80 hover:border-[var(--primary-color)]/50 hover:scale-105
                        skill-item ${index % 2 === 0 ? 'from-left' : 'from-right'} ${isVisible ? 'is-visible' : ''}`}
-            style={{ transitionDelay: `${(index % 8) * 50}ms` }}
+            style={{ transitionDelay: `${index * 200}ms` }}
           >
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                  style={{ 

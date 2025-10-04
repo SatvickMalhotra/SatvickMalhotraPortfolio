@@ -40,6 +40,11 @@ export const Projects: React.FC = () => {
           opacity: 1;
           transform: scale(1) translateY(0);
         }
+        @media (max-width: 767px) {
+          .project-card {
+            transform: scale(0.95) translateY(10px);
+          }
+        }
       `}</style>
       <SectionTitle>Featured Projects</SectionTitle>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

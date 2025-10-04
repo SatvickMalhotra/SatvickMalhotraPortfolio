@@ -39,6 +39,11 @@ export const Experience: React.FC = () => {
           opacity: 1;
           transform: translateY(0);
         }
+        @media (max-width: 767px) {
+          .experience-item {
+            transform: translateY(15px);
+          }
+        }
       `}</style>
       <SectionTitle>Career Journey</SectionTitle>
       <div className="relative max-w-3xl mx-auto px-4 md:px-0">

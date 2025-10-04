@@ -31,9 +31,10 @@ const AnimatedBackground: React.FC = () => {
 
     const verticalLines = {
       list: [] as { x: number; y: number; speed: number; length: number }[],
-      count: 40,
+      count: isLargeScreen ? 40 : 20,
       init() {
         this.list = [];
+        this.count = isLargeScreen ? 40 : 20;
         for (let i = 0; i < this.count; i++) {
           this.list.push({
             x: Math.random() * width,
@@ -68,9 +69,10 @@ const AnimatedBackground: React.FC = () => {
     
     const particles = {
       list: [] as { x: number; y: number; size: number; speed: number }[],
-      count: 100,
+      count: isLargeScreen ? 100 : 50,
       init() {
         this.list = [];
+        this.count = isLargeScreen ? 100 : 50;
         for (let i = 0; i < this.count; i++) {
           this.list.push({
             x: Math.random() * width,

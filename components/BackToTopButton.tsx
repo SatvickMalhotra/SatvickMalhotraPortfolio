@@ -31,10 +31,10 @@ export const BackToTopButton: React.FC = () => {
     <button
       type="button"
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-cyan-500/50 backdrop-blur-sm
-                  text-white shadow-lg shadow-cyan-500/30
+      className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-[var(--primary-color)]/50 backdrop-blur-sm
+                  text-white shadow-lg shadow-[var(--primary-color)]/30
                   transition-all duration-300 ease-in-out
-                  hover:bg-cyan-500/80 hover:scale-110 hover:shadow-cyan-400/50
+                  hover:bg-[var(--primary-color)]/80 hover:scale-110 hover:shadow-[var(--primary-color)]/50
                   ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
       aria-label="Go to top"
       title="Go to top"

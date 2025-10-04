@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CloseIcon } from './icons/Icons';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <h2 className="text-4xl font-bold text-center mb-12 text-gray-100">{children}</h2>
+  <h2 className="text-4xl font-bold text-center mb-12 text-[var(--text-color)]">{children}</h2>
 );
 
 export const Contact: React.FC = () => {
@@ -29,16 +29,16 @@ export const Contact: React.FC = () => {
       <section id="contact" className="py-20">
         <SectionTitle>Get In Touch</SectionTitle>
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg text-gray-400 mb-12">
+          <p className="text-lg text-[var(--text-muted-color)] mb-12">
             Have a project in mind, want to collaborate, or just say hi? Let's connect.
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
             className="inline-flex items-center gap-3 px-8 py-4 font-semibold text-lg
-                       bg-gray-800/50 border-2 border-purple-500/50 text-purple-300 rounded-lg
+                       bg-[var(--card-background-color)]/80 border-2 border-[var(--secondary-color)]/50 text-[var(--secondary-color)] rounded-lg
                        backdrop-blur-sm transition-all duration-300 ease-in-out
-                       hover:bg-purple-400/20 hover:text-white hover:border-purple-400
-                       hover:shadow-lg hover:shadow-purple-500/30 transform hover:-translate-y-1"
+                       hover:bg-[var(--secondary-color)]/20 hover:text-white hover:border-[var(--secondary-color)]
+                       hover:shadow-lg hover:shadow-[var(--secondary-color)]/30 transform hover:-translate-y-1"
           >
             Contact Us Today
           </button>
@@ -70,14 +70,14 @@ export const Contact: React.FC = () => {
             role="dialog"
           >
             <div
-              className="fixed top-1/2 left-1/2 bg-gray-900/80 border border-gray-700 rounded-2xl shadow-2xl shadow-cyan-500/20
+              className="fixed top-1/2 left-1/2 bg-[var(--card-background-color)] border border-[var(--border-color)] rounded-2xl shadow-2xl shadow-[var(--primary-color)]/20
                          w-[90vw] max-w-3xl h-[90vh] max-h-[850px] p-4 pt-12 flex flex-col
                          animate-scale-in"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-3 right-3 text-gray-400 hover:text-white transition-colors z-10 p-1 bg-gray-800/50 rounded-full"
+                className="absolute top-3 right-3 text-[var(--text-muted-color)] hover:text-white transition-colors z-10 p-1 bg-black/20 rounded-full"
                 aria-label="Close contact form"
               >
                 <CloseIcon className="w-6 h-6" />

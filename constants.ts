@@ -1,7 +1,7 @@
 import {
     PythonIcon, SqlIcon, GithubIcon, HtmlIcon, CssIcon, JsIcon, ReactIcon, TypescriptIcon, NextjsIcon, PostgresqlIcon, GcpIcon, JiraIcon, TensorflowIcon, PytorchIcon, PandasIcon, DockerIcon, AwsIcon, AgileIcon, ScrumIcon, FigmaIcon, PowerbiIcon, LinkedinIcon, MailIcon,
     // New icons we are adding:
-    SlackIcon, NumpyIcon
+    SlackIcon, NumpyIcon, AiIcon
 } from './components/icons/Icons';
 import type { Skill, ExperienceItem, Project, SocialLink } from './types';
 
@@ -21,6 +21,7 @@ export const SKILLS: Skill[] = [
   { name: 'Jira', icon: JiraIcon },
   { name: 'TensorFlow', icon: TensorflowIcon },
   { name: 'PyTorch', icon: PytorchIcon },
+  { name: 'AI', icon: AiIcon },
   { name: 'NumPy', icon: NumpyIcon }, // <-- REPLACED SCIKIT-LEARN
   { name: 'Pandas', icon: PandasIcon },
   { name: 'Docker', icon: DockerIcon },

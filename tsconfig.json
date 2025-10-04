@@ -21,6 +21,8 @@
     "index.tsx",
     "types.ts",
     "constants.ts",
+    "themes.ts",
+    "contexts",
     "components"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]

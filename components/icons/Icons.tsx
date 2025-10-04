@@ -23,14 +23,16 @@ export const ReactIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-react-original colored ${iconSize} ${className}`}></i>
 );
 export const NextjsIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-nextjs-original text-white ${iconSize} ${className}`}></i>
+    <i className={`devicon-nextjs-original text-[var(--text-color)] ${iconSize} ${className}`}></i>
 );
 
 // --- Databases ---
 export const SqlIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-database text-[var(--secondary-color)] ${iconSize} ${className}`}></i>
+);
+export const PostgresqlIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-postgresql-plain colored ${iconSize} ${className}`}></i>
 );
-export const PostgresqlIcon = SqlIcon; // Alias to prevent future errors
 
 // --- DevOps & Cloud ---
 export const GithubIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -52,6 +54,9 @@ export const TensorflowIcon: React.FC<{ className?: string }> = ({ className }) 
 );
 export const PytorchIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-pytorch-plain colored ${iconSize} ${className}`}></i>
+);
+export const AiIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-brain text-[var(--primary-color)] ${iconSize} ${className}`}></i>
 );
 // REPLACEMENT for Scikit-learn:
 export const NumpyIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -77,16 +82,22 @@ export const PowerbiIcon: React.FC<{ className?: string }> = ({ className }) => 
 
 // --- Methodologies ---
 export const AgileIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-arrows-spin text-blue-500 ${iconSize} ${className}`}></i>
+    <i className={`fa-solid fa-arrows-spin text-[var(--primary-color)] ${iconSize} ${className}`}></i>
 );
 export const ScrumIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-people-group text-green-500 ${iconSize} ${className}`}></i>
+    <i className={`fa-solid fa-people-group text-[var(--secondary-color)] ${iconSize} ${className}`}></i>
 );
 
 // --- Communication & Social ---
-// REPLACEMENT for Telegram/Discord:
 export const SlackIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-slack-plain colored ${iconSize} ${className}`}></i>
+    <svg className={className} width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="10" height="10" rx="2" fill="#E01E5A"/>
+        <rect x="5" y="20" width="10" height="10" rx="2" fill="#36C5F0"/>
+        <rect x="20" y="5" width="10" height="10" rx="2" fill="#2EB67D"/>
+        <rect x="20" y="20" width="10" height="10" rx="2" fill="#ECB22E"/>
+        <rect x="35" y="20" width="10" height="10" rx="2" fill="#E01E5A"/>
+        <rect x="20" y="35" width="10" height="10" rx="2" fill="#36C5F0"/>
+    </svg>
 );
 export const LinkedinIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-linkedin-plain colored ${iconSize} ${className}`}></i>
@@ -94,11 +105,14 @@ export const LinkedinIcon: React.FC<{ className?: string }> = ({ className }) =>
 
 // --- General Icons ---
 export const MailIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-envelope text-gray-400 ${iconSize} ${className}`}></i>
+    <i className={`fa-solid fa-envelope text-[var(--text-muted-color)] ${iconSize} ${className}`}></i>
 );
 export const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-xmark text-gray-400 ${iconSize} ${className}`}></i>
+    <i className={`fa-solid fa-xmark text-[var(--text-muted-color)] ${iconSize} ${className}`}></i>
 );
 export const ChevronUpIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`fa-solid fa-chevron-up ${className}`}></i>
+);
+export const PaletteIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-palette ${className}`}></i>
 );

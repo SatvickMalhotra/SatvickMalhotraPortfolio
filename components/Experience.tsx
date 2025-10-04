@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { EXPERIENCES } from '../constants';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -6,14 +6,50 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 );
 
 export const Experience: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20" ref={sectionRef}>
+      <style>{`
+        .experience-item {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .experience-item.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      `}</style>
       <SectionTitle>Career Journey</SectionTitle>
       <div className="relative max-w-3xl mx-auto px-4 md:px-0">
         <div className="absolute left-4 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-[var(--primary-color)]/50 to-transparent md:left-1/2 md:-translate-x-1/2"></div>
         
         {EXPERIENCES.map((item, index) => (
-          <div key={index} className="relative mb-12 md:flex md:items-center md:justify-between w-full">
+          <div 
+            key={index} 
+            className={`relative mb-12 md:flex md:items-center md:justify-between w-full experience-item ${isVisible ? 'is-visible' : ''}`}
+            style={{ transitionDelay: `${index * 150}ms` }}
+          >
             
             {/* Desktop-only Date Div */}
             <div className={`hidden md:block order-1 md:w-5/12 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>

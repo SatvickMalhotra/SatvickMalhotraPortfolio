@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { PROJECTS } from '../constants';
 import { GithubIcon } from './icons/Icons';
 
@@ -7,15 +7,49 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 );
 
 export const Projects: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20" ref={sectionRef}>
+      <style>{`
+        .project-card {
+          opacity: 0;
+          transform: scale(0.9) translateY(20px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .project-card.is-visible {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      `}</style>
       <SectionTitle>Featured Projects</SectionTitle>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {PROJECTS.map((project, index) => (
           <div key={index} 
-               className="flex flex-col bg-[var(--card-background-color)] backdrop-blur-sm border border-[var(--border-color)] rounded-2xl 
+               className={`flex flex-col bg-[var(--card-background-color)] backdrop-blur-sm border border-[var(--border-color)] rounded-2xl 
                           overflow-hidden transition-all duration-300 hover:border-[var(--primary-color)]/50 hover:scale-105
-                          shadow-lg hover:shadow-[var(--primary-color)]/20">
+                          shadow-lg hover:shadow-[var(--primary-color)]/20 project-card ${isVisible ? 'is-visible' : ''}`}
+               style={{ transitionDelay: `${index * 100}ms` }}
+            >
             <div className="relative">
                 <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
                 <div className="absolute top-4 right-4 flex gap-3">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { SKILLS } from '../constants';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -6,8 +6,31 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 );
 
 export const Skills: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20" ref={sectionRef}>
       <style>{`
         @keyframes wiggle {
           0% { transform: translateY(-0.5rem) rotate(0deg); }
@@ -19,17 +42,33 @@ export const Skills: React.FC = () => {
         .group:hover .wiggle-on-hover {
           animation: wiggle 0.4s ease-in-out infinite;
         }
+        .skill-item {
+          opacity: 0;
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .skill-item.from-left {
+          transform: translateX(-80px);
+        }
+        .skill-item.from-right {
+          transform: translateX(80px);
+        }
+        .skill-item.is-visible {
+          opacity: 1;
+          transform: translateX(0);
+        }
       `}</style>
       <SectionTitle>Tools & Skills</SectionTitle>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-6 gap-y-12">
-        {SKILLS.map((skill) => (
+        {SKILLS.map((skill, index) => (
           <div
             key={skill.name}
-            className="group relative flex flex-col items-center justify-center p-4 aspect-square
+            className={`group relative flex flex-col items-center justify-center p-4 aspect-square
                        bg-[var(--card-background-color)] rounded-2xl border border-[var(--border-color)]
                        backdrop-blur-sm
                        transition-all duration-300 ease-in-out
-                       hover:bg-[var(--card-background-color)]/80 hover:border-[var(--primary-color)]/50 hover:scale-105"
+                       hover:bg-[var(--card-background-color)]/80 hover:border-[var(--primary-color)]/50 hover:scale-105
+                       skill-item ${index % 2 === 0 ? 'from-left' : 'from-right'} ${isVisible ? 'is-visible' : ''}`}
+            style={{ transitionDelay: `${(index % 8) * 50}ms` }}
           >
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                  style={{ 

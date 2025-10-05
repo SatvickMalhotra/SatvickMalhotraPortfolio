@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const BouncingText: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
   const words = text.split(' ');
@@ -47,6 +47,35 @@ const AnimatedWords: React.FC<{ text: string }> = ({ text }) => {
 
 
 export const Hero: React.FC = () => {
+  const [logoStyle, setLogoStyle] = useState({});
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      // Only apply effect on larger screens
+      if (window.innerWidth < 1024) {
+        setLogoStyle({}); // Reset style on smaller screens if any was applied
+        return;
+      }
+
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
+      
+      // Calculate offset from the center of the viewport and divide to reduce intensity
+      const offsetX = (clientX - innerWidth / 2) / 30;
+      const offsetY = (clientY - innerHeight / 2) / 40;
+
+      setLogoStyle({
+        transform: `perspective(1000px) rotateY(${offsetX / 10}deg) rotateX(${-offsetY / 10}deg) translate(${offsetX}px, ${offsetY}px)`,
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center">
       <style>{`
@@ -85,7 +114,10 @@ export const Hero: React.FC = () => {
         }
       `}</style>
       <div className="text-center">
-        <div className="relative inline-block mb-8">
+        <div 
+          className="relative inline-block mb-8 transition-transform duration-300 ease-out"
+          style={logoStyle}
+        >
           <img
             src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/Generated%20Image%20September%2008%2C%202025%20-%205_25PM.png"
             alt="Satvick Malhotra"

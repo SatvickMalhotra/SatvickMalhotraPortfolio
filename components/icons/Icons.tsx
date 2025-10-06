@@ -8,13 +8,13 @@ export const PythonIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-python-plain colored ${iconSize} ${className}`}></i>
 );
 export const HtmlIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-html5-plain colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/html-icon.png" alt="HTML" className={className} />
 );
 export const CssIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-css3-plain colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/css-icon.png" alt="CSS" className={className} />
 );
 export const JsIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-javascript-plain colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/javascript-programming-language-icon.png" alt="JavaScript" className={className} />
 );
 export const TypescriptIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-typescript-plain colored ${iconSize} ${className}`}></i>
@@ -23,12 +23,12 @@ export const ReactIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-react-original colored ${iconSize} ${className}`}></i>
 );
 export const NextjsIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-nextjs-original text-[var(--text-color)] ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/nextjs-icon.png" alt="Next.js" className={className} />
 );
 
 // --- Databases ---
 export const SqlIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-database text-[var(--secondary-color)] ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/sql.png" alt="SQL" className={className} />
 );
 export const PostgresqlIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-postgresql-plain colored ${iconSize} ${className}`}></i>
@@ -39,13 +39,13 @@ export const GithubIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-github-original ${iconSize} ${className}`}></i>
 );
 export const GcpIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-googlecloud-plain colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/google%20cloud.png" alt="Google Cloud" className={className} />
 );
 export const AwsIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-amazonwebservices-original colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/aws.png" alt="AWS" className={className} />
 );
 export const DockerIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-docker-plain colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/docker.png" alt="Docker" className={className} />
 );
 
 // --- Data Science & ML ---
@@ -56,48 +56,38 @@ export const PytorchIcon: React.FC<{ className?: string }> = ({ className }) => 
     <i className={`devicon-pytorch-plain colored ${iconSize} ${className}`}></i>
 );
 export const AiIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-brain text-[var(--primary-color)] ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/ai.png" alt="AI" className={className} />
 );
 // REPLACEMENT for Scikit-learn:
 export const NumpyIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-numpy-original colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/icons8-numpy-480.png" alt="NumPy" className={className} />
 );
 export const PandasIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-pandas-original colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/pandas.png" alt="Pandas" className={className} />
 );
 
 // --- Project Management & Design ---
 export const JiraIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-jira-plain colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/jira.png" alt="Jira" className={className} />
 );
 export const FigmaIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-figma-plain colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/figma.png" alt="Figma" className={className} />
 );
 export const PowerbiIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
-    <title>Microsoft Power BI</title>
-    <path d="M1.333 21.333V12h6v9.333z" fill="#F2C811"/><path d="M10 21.333v-6h6v6z" fill="#F2C811"/><path d="M18.667 21.333V2.667h-6v18.666z" fill="#F2C811"/><path d="M10 8.333V2.667H4v5.666z" fill="#F2C811"/>
-  </svg>
+  <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/power-bi-icon.png" alt="Power BI" className={className} />
 );
 
 // --- Methodologies ---
 export const AgileIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-arrows-spin text-[var(--primary-color)] ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/agilee.png" alt="Agile" className={className} />
 );
 export const ScrumIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-people-group text-[var(--secondary-color)] ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/scrum.png" alt="Scrum" className={className} />
 );
 
 // --- Communication & Social ---
 export const SlackIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="5" width="10" height="10" rx="2" fill="#E01E5A"/>
-        <rect x="5" y="20" width="10" height="10" rx="2" fill="#36C5F0"/>
-        <rect x="20" y="5" width="10" height="10" rx="2" fill="#2EB67D"/>
-        <rect x="20" y="20" width="10" height="10" rx="2" fill="#ECB22E"/>
-        <rect x="35" y="20" width="10" height="10" rx="2" fill="#E01E5A"/>
-        <rect x="20" y="35" width="10" height="10" rx="2" fill="#36C5F0"/>
-    </svg>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/slack-icon.png" alt="Slack" className={className} />
 );
 export const LinkedinIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`devicon-linkedin-plain colored ${iconSize} ${className}`}></i>

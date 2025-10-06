@@ -37,7 +37,7 @@ export const FloatingLogo: React.FC<FloatingLogoProps> = ({ isVisible }) => {
 
   return (
     <img
-      src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/Generated%20Image%20September%2008%2C%202025%20-%205_25PM.png"
+      src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/shiva.png"
       alt="Floating profile logo"
       className={`fixed z-50 w-16 h-16 rounded-full object-cover border-2 border-[var(--primary-color)] pointer-events-none
                  shadow-lg shadow-[var(--primary-color)]/40

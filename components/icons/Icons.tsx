@@ -5,7 +5,7 @@ const iconSize = 'text-5xl';
 
 // --- Programming Languages & Frameworks ---
 export const PythonIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-python-plain colored ${iconSize} ${className}`}></i>
+    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/pythonn.gif" alt="Python" className={className} />
 );
 export const HtmlIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/html-icon.png" alt="HTML" className={className} />

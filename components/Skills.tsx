@@ -83,7 +83,7 @@ export const Skills: React.FC = () => {
                        transition-all duration-300 ease-in-out
                        hover:bg-[var(--card-background-color)]/80 hover:border-[var(--primary-color)]/50 hover:scale-105
                        skill-item ${index % 2 === 0 ? 'from-left' : 'from-right'} ${isVisible ? 'is-visible' : ''}`}
-            style={{ transitionDelay: `${index * 200}ms` }}
+            style={{ transitionDelay: `${index * 150}ms` }}
           >
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                  style={{ 

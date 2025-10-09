@@ -1,35 +1,31 @@
-import {
-    PythonIcon, SqlIcon, GithubIcon, HtmlIcon, CssIcon, JsIcon, ReactIcon, TypescriptIcon, NextjsIcon, PostgresqlIcon, GcpIcon, JiraIcon, TensorflowIcon, PytorchIcon, PandasIcon, DockerIcon, AwsIcon, AgileIcon, ScrumIcon, FigmaIcon, PowerbiIcon, LinkedinIcon, MailIcon,
-    // New icons we are adding:
-    SlackIcon, NumpyIcon, AiIcon
-} from './components/icons/Icons';
+import * as Icons from './components/icons/Icons';
 import type { Skill, ExperienceItem, Project, SocialLink } from './types';
 
 export const SKILLS: Skill[] = [
-  { name: 'Python', icon: PythonIcon },
-  { name: 'SQL', icon: SqlIcon },
-  { name: 'GitHub', icon: GithubIcon },
-  { name: 'HTML', icon: HtmlIcon },
-  { name: 'CSS', icon: CssIcon },
-  { name: 'JavaScript', icon: JsIcon },
-  { name: 'React', icon: ReactIcon },
-  { name: 'TypeScript', icon: TypescriptIcon },
-  { name: 'Next.js', icon: NextjsIcon },
-  { name: 'PostgreSQL', icon: PostgresqlIcon },
-  { name: 'Slack', icon: SlackIcon }, // <-- REPLACED TELEGRAM/DISCORD
-  { name: 'Google Cloud', icon: GcpIcon },
-  { name: 'Jira', icon: JiraIcon },
-  { name: 'TensorFlow', icon: TensorflowIcon },
-  { name: 'PyTorch', icon: PytorchIcon },
-  { name: 'AI', icon: AiIcon },
-  { name: 'NumPy', icon: NumpyIcon }, // <-- REPLACED SCIKIT-LEARN
-  { name: 'Pandas', icon: PandasIcon },
-  { name: 'Docker', icon: DockerIcon },
-  { name: 'AWS', icon: AwsIcon },
-  { name: 'Agile', icon: AgileIcon },
-  { name: 'Scrum', icon: ScrumIcon },
-  { name: 'Figma', icon: FigmaIcon },
-  { name: 'Power BI', icon: PowerbiIcon },
+  { name: 'Python', icon: Icons.PythonIcon },
+  { name: 'SQL', icon: Icons.SqlIcon },
+  { name: 'GitHub', icon: Icons.GithubIcon },
+  { name: 'HTML', icon: Icons.HtmlIcon },
+  { name: 'CSS', icon: Icons.CssIcon },
+  { name: 'JavaScript', icon: Icons.JsIcon },
+  { name: 'React', icon: Icons.ReactIcon },
+  { name: 'TypeScript', icon: Icons.TypescriptIcon },
+  { name: 'Next.js', icon: Icons.NextjsIcon },
+  { name: 'PostgreSQL', icon: Icons.PostgresqlIcon },
+  { name: 'Slack', icon: Icons.SlackIcon },
+  { name: 'Google Cloud', icon: Icons.GcpIcon },
+  { name: 'Jira', icon: Icons.JiraIcon },
+  { name: 'TensorFlow', icon: Icons.TensorflowIcon },
+  { name: 'PyTorch', icon: Icons.PytorchIcon },
+  { name: 'AI', icon: Icons.AiIcon },
+  { name: 'NumPy', icon: Icons.NumpyIcon },
+  { name: 'Pandas', icon: Icons.PandasIcon },
+  { name: 'Docker', icon: Icons.DockerIcon },
+  { name: 'AWS', icon: Icons.AwsIcon },
+  { name: 'Agile', icon: Icons.AgileIcon },
+  { name: 'Scrum', icon: Icons.ScrumIcon },
+  { name: 'Figma', icon: Icons.FigmaIcon },
+  { name: 'Power BI', icon: Icons.PowerbiIcon },
 ];
 
 export const EXPERIENCES: ExperienceItem[] = [
@@ -105,7 +101,7 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-    { name: 'GitHub', url: 'https://github.com/SatvickMalhotra', icon: GithubIcon },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/satvick-malhotra-a86261135/', icon: LinkedinIcon },
-    { name: 'Email', url: 'mailto:satvickmalhotraofficial@gmail.com', icon: MailIcon },
+    { name: 'GitHub', url: 'https://github.com/SatvickMalhotra', icon: Icons.GithubIcon },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/satvick-malhotra-a86261135/', icon: Icons.LinkedinIcon },
+    { name: 'Email', url: 'mailto:satvickmalhotraofficial@gmail.com', icon: Icons.MailIcon },
 ];

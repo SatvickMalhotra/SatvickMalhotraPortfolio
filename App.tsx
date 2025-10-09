@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // <-- THIS LINE IS NOW FIXED
 import { Hero } from './components/Hero';
 import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
@@ -16,7 +16,6 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show the floating logo once the user has scrolled past 80% of the viewport height
       const shouldBeVisible = window.scrollY > window.innerHeight * 0.8;
       if (shouldBeVisible !== isFloatingLogoVisible) {
         setIsFloatingLogoVisible(shouldBeVisible);

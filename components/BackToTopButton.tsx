@@ -39,7 +39,7 @@ export const BackToTopButton: React.FC = () => {
       aria-label="Go to top"
       title="Go to top"
     >
-      <ChevronUpIcon className="w-6 h-6" />
+      <ChevronUpIcon className="w-6 h-6 text-2xl" />
     </button>
   );
 };

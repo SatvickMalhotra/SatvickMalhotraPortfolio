@@ -68,7 +68,7 @@ export const ThemeSwitcher: React.FC = () => {
                 aria-label="Change theme"
                 title="Change theme"
             >
-                <PaletteIcon className="w-6 h-6" />
+                <PaletteIcon className="w-6 h-6 text-2xl" />
             </button>
         </div>
     );

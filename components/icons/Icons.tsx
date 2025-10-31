@@ -1,8 +1,5 @@
 import React from 'react';
 
-// You can adjust this 'text-5xl' class to make all icons larger or smaller
-const iconSize = 'text-5xl';
-
 // --- Programming Languages & Frameworks ---
 export const PythonIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/pythonn.gif" alt="Python" className={className} />
@@ -17,10 +14,10 @@ export const JsIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/javascript-programming-language-icon.png" alt="JavaScript" className={className} />
 );
 export const TypescriptIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-typescript-plain colored ${iconSize} ${className}`}></i>
+    <i className={`devicon-typescript-plain colored ${className}`}></i>
 );
 export const ReactIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-react-original colored ${iconSize} ${className}`}></i>
+    <i className={`devicon-react-original colored ${className}`}></i>
 );
 export const NextjsIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/nextjs-icon.png" alt="Next.js" className={className} />
@@ -31,12 +28,12 @@ export const SqlIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/sql.png" alt="SQL" className={className} />
 );
 export const PostgresqlIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-postgresql-plain colored ${iconSize} ${className}`}></i>
+    <i className={`devicon-postgresql-plain colored ${className}`}></i>
 );
 
 // --- DevOps & Cloud ---
 export const GithubIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-github-original ${iconSize} ${className}`}></i>
+    <i className={`devicon-github-original ${className}`}></i>
 );
 export const GcpIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/google%20cloud.png" alt="Google Cloud" className={className} />
@@ -50,10 +47,10 @@ export const DockerIcon: React.FC<{ className?: string }> = ({ className }) => (
 
 // --- Data Science & ML ---
 export const TensorflowIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-tensorflow-original colored ${iconSize} ${className}`}></i>
+    <i className={`devicon-tensorflow-original colored ${className}`}></i>
 );
 export const PytorchIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-pytorch-plain colored ${iconSize} ${className}`}></i>
+    <i className={`devicon-pytorch-plain colored ${className}`}></i>
 );
 export const AiIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/ai.png" alt="AI" className={className} />
@@ -69,9 +66,6 @@ export const PandasIcon: React.FC<{ className?: string }> = ({ className }) => (
 // --- Project Management & Design ---
 export const JiraIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/jira.png" alt="Jira" className={className} />
-);
-export const FigmaIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/figma.png" alt="Figma" className={className} />
 );
 export const PowerbiIcon: React.FC<{ className?: string }> = ({ className }) => (
   <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/power-bi-icon.png" alt="Power BI" className={className} />
@@ -90,19 +84,39 @@ export const SlackIcon: React.FC<{ className?: string }> = ({ className }) => (
     <img src="https://raw.githubusercontent.com/SatvickMalhotra/My-portfolio/main/Pics/slack-icon.png" alt="Slack" className={className} />
 );
 export const LinkedinIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`devicon-linkedin-plain colored ${iconSize} ${className}`}></i>
+    <i className={`devicon-linkedin-plain colored ${className}`}></i>
+);
+export const WhatsappIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-brands fa-whatsapp ${className}`}></i>
 );
 
 // --- General Icons ---
 export const MailIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-envelope text-[var(--text-muted-color)] ${iconSize} ${className}`}></i>
+    <i className={`fa-solid fa-envelope ${className}`}></i>
 );
 export const CloseIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <i className={`fa-solid fa-xmark text-[var(--text-muted-color)] ${iconSize} ${className}`}></i>
+    <i className={`fa-solid fa-xmark ${className}`}></i>
+);
+export const MenuIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-bars ${className}`}></i>
 );
 export const ChevronUpIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`fa-solid fa-chevron-up ${className}`}></i>
 );
 export const PaletteIcon: React.FC<{ className?: string }> = ({ className }) => (
     <i className={`fa-solid fa-palette ${className}`}></i>
+);
+
+// --- Skill Category Icons ---
+export const WebDevIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-code ${className}`}></i>
+);
+export const DataAiIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-brain ${className}`}></i>
+);
+export const InfraIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-server ${className}`}></i>
+);
+export const ProductDesignIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <i className={`fa-solid fa-compass-drafting ${className}`}></i>
 );

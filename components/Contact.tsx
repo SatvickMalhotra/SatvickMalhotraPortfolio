@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
                        hover:bg-[var(--secondary-color)]/20 hover:text-white hover:border-[var(--secondary-color)]
                        hover:shadow-lg hover:shadow-[var(--secondary-color)]/30 transform hover:-translate-y-1"
           >
-            Contact Us Today
+            Contact Today
           </button>
         </div>
       </section>
@@ -80,7 +80,7 @@ export const Contact: React.FC = () => {
                 className="absolute top-3 right-3 text-[var(--text-muted-color)] hover:text-white transition-colors z-10 p-1 bg-black/20 rounded-full"
                 aria-label="Close contact form"
               >
-                <CloseIcon className="w-6 h-6" />
+                <CloseIcon className="w-6 h-6 text-2xl" />
               </button>
               <div className="flex-grow h-full w-full rounded-lg overflow-hidden">
                 <iframe

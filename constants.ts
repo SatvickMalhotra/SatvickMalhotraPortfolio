@@ -1,31 +1,54 @@
 import * as Icons from './components/icons/Icons';
-import type { Skill, ExperienceItem, Project, SocialLink } from './types';
+import type { Skill, ExperienceItem, Project, SocialLink, SkillOrGroup } from './types';
 
-export const SKILLS: Skill[] = [
-  { name: 'Python', icon: Icons.PythonIcon },
-  { name: 'SQL', icon: Icons.SqlIcon },
-  { name: 'GitHub', icon: Icons.GithubIcon },
-  { name: 'HTML', icon: Icons.HtmlIcon },
-  { name: 'CSS', icon: Icons.CssIcon },
-  { name: 'JavaScript', icon: Icons.JsIcon },
-  { name: 'React', icon: Icons.ReactIcon },
-  { name: 'TypeScript', icon: Icons.TypescriptIcon },
-  { name: 'Next.js', icon: Icons.NextjsIcon },
-  { name: 'PostgreSQL', icon: Icons.PostgresqlIcon },
-  { name: 'Slack', icon: Icons.SlackIcon },
-  { name: 'Google Cloud', icon: Icons.GcpIcon },
-  { name: 'Jira', icon: Icons.JiraIcon },
-  { name: 'TensorFlow', icon: Icons.TensorflowIcon },
-  { name: 'PyTorch', icon: Icons.PytorchIcon },
-  { name: 'AI', icon: Icons.AiIcon },
-  { name: 'NumPy', icon: Icons.NumpyIcon },
-  { name: 'Pandas', icon: Icons.PandasIcon },
-  { name: 'Docker', icon: Icons.DockerIcon },
-  { name: 'AWS', icon: Icons.AwsIcon },
-  { name: 'Agile', icon: Icons.AgileIcon },
-  { name: 'Scrum', icon: Icons.ScrumIcon },
-  { name: 'Figma', icon: Icons.FigmaIcon },
-  { name: 'Power BI', icon: Icons.PowerbiIcon },
+export const SKILLS: SkillOrGroup[] = [
+  {
+    name: 'Web Development',
+    icon: Icons.WebDevIcon,
+    skills: [
+      { name: 'HTML', icon: Icons.HtmlIcon },
+      { name: 'CSS', icon: Icons.CssIcon },
+      { name: 'JavaScript', icon: Icons.JsIcon },
+      { name: 'TypeScript', icon: Icons.TypescriptIcon },
+      { name: 'React', icon: Icons.ReactIcon },
+      { name: 'Next.js', icon: Icons.NextjsIcon },
+    ]
+  },
+  {
+    name: 'Data & AI',
+    icon: Icons.DataAiIcon,
+    skills: [
+      { name: 'Python', icon: Icons.PythonIcon },
+      { name: 'NumPy', icon: Icons.NumpyIcon },
+      { name: 'Pandas', icon: Icons.PandasIcon },
+      { name: 'TensorFlow', icon: Icons.TensorflowIcon },
+      { name: 'PyTorch', icon: Icons.PytorchIcon },
+      { name: 'AI', icon: Icons.AiIcon },
+    ]
+  },
+  {
+    name: 'Cloud & DevOps',
+    icon: Icons.InfraIcon,
+    skills: [
+      { name: 'SQL', icon: Icons.SqlIcon },
+      { name: 'PostgreSQL', icon: Icons.PostgresqlIcon },
+      { name: 'Docker', icon: Icons.DockerIcon },
+      { name: 'AWS', icon: Icons.AwsIcon },
+      { name: 'Google Cloud', icon: Icons.GcpIcon },
+      { name: 'GitHub', icon: Icons.GithubIcon },
+    ]
+  },
+  {
+    name: 'Product & Design',
+    icon: Icons.ProductDesignIcon,
+    skills: [
+      { name: 'Agile', icon: Icons.AgileIcon },
+      { name: 'Scrum', icon: Icons.ScrumIcon },
+      { name: 'Jira', icon: Icons.JiraIcon },
+      { name: 'Power BI', icon: Icons.PowerbiIcon },
+      { name: 'Slack', icon: Icons.SlackIcon },
+    ]
+  }
 ];
 
 export const EXPERIENCES: ExperienceItem[] = [

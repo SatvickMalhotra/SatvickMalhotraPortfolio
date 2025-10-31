@@ -61,7 +61,7 @@ export const Projects: React.FC = () => {
                     {project.repoUrl && (
                       <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" 
                          className="bg-black/50 p-2 rounded-full text-[var(--text-muted-color)] hover:text-white hover:bg-black/80 transition-colors">
-                        <GithubIcon className="w-6 h-6" />
+                        <GithubIcon className="w-6 h-6 text-2xl" />
                       </a>
                     )}
                 </div>

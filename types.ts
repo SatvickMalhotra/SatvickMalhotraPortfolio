@@ -1,10 +1,17 @@
-
 import type React from 'react';
 
 export interface Skill {
   name: string;
   icon: React.ComponentType<{ className?: string }>;
 }
+
+export interface SkillGroup {
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  skills: Skill[];
+}
+
+export type SkillOrGroup = Skill | SkillGroup;
 
 export interface ExperienceItem {
   role: string;

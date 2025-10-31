@@ -1,5 +1,5 @@
 import * as Icons from './components/icons/Icons';
-import type { Skill, ExperienceItem, Project, SocialLink, SkillOrGroup } from './types';
+import type { ExperienceItem, Project, SocialLink, SkillOrGroup } from './types';
 
 export const SKILLS: SkillOrGroup[] = [
   {
